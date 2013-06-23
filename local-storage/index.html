@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Local Storage - CodePen</title>
+  
+  <style>
+  [contentEditable] {
+    border: 1px solid #ddd;
+    padding: 1em;
+  }    
+  </style>
+
+</head>
+
+<body>
+
+  <p contentEditable></p>
+
+<script src="//code.jquery.com/jquery-latest.js"></script>
+<script>
+$(document).ready(function() {
+
+  if ( localStorage.getItem('text') ) {
+      $('p').text(localStorage.getItem('text'));
+  }
+
+  $('p').on('keyup', function() {
+    localStorage.setItem('text', $(this).text());
+  });
+
+  })
+  </script>
+
+</body>
+
+</html>

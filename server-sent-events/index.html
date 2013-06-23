@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Server Sent Events demo</title>
+  </head>
+  <body>
+    
+    <ul id="eventList"></ul>
+
+  </body>
+
+  <script src="../_assets/jquery.js"></script>
+  <script src="eventsource.js"></script>  
+  <script>
+    var evtSource = new EventSource("server.php");  
+
+    evtSource.addEventListener("message", function(e) {      
+      $('#eventList').append('<li>' + e.data)
+    });    
+  </script>
+  
+</html>

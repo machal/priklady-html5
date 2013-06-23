@@ -1,0 +1,21 @@
+[role=navigation] {
+	list-style-type: none;
+	border-bottom: 1px solid #ddd;
+	margin: 0 0 2em 0;
+	padding: 0;
+}
+
+[role=navigation] li {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+[role=navigation] a {
+	display: inline-block;
+	padding: .5em;
+}	
+
+[role=navigation] a.active {
+	border-bottom: .2em solid #ddd;
+}
